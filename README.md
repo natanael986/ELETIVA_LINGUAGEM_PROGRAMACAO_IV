@@ -1,2 +1,2 @@
 # EletivaI-LinguagemprogramcaoIV
-**Repositório de código fonte da disciplina de Linguagem de programacao**
+**Repositório de código fonte da disciplina de Linguagem de programacao IV**
