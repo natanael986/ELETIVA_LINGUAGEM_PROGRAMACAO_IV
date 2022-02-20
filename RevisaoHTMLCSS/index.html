@@ -5,18 +5,29 @@
         <meta charset="utf-8">
         <link href="style.css" rek="stylrsheet">
         <style>
-            body{background:red}
+            body{
+                background:rgb(236, 227, 227)
+            }
+            .estilo-campos{
+                background: green;
+            }
+
+            #descricao{
+                background: yellow;
+            }
+
         </style>
     </head>
 
     <body>
         <header>
+            <!--LISTAS-->
             <nav>
                 <ul>
                     <li>Item X</li>
                     <li>Item Y</li>
                     <li>Item Z</li>
-                </ul>;
+                </ul>
 
                 <ol>
                     <li>Item 1</li>
@@ -28,17 +39,61 @@
         
         <main>
             <section>
+                <!--CONTEUDO DA PAGINA-->
                 <h1>Título de Nível 1</h1>
                 <h2>Título de Nível 2</h2>
                 <div>
                     <p>Este é um texto</p>
                     <p>Este é um <span class="texto-vermelho"> bloco de conteúdo </span> </p>
                 </div>
+                
+                <!--TABELAS-->
+                <table>
+                    <caption>Tabela</caption>
+                    <thead>
+                        <tr>
+                            <th colspan="2">TABELA EXEMPLO</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Valor 1</td>
+                            <td>Valor 2</td>
+                        </tr>
+                        <tr>
+                            <td>Valor 3</td>
+                            <td>Valor 4</td>
+                        </tr>
+                    </tbody>
+                    <tfooter>
+                        <tr>
+                            <td colspan="2">Rodapé da Tabela</td>
+                        </tr>
+                    </tfooter>
+                </table>
+
+                <!--FORMULÁRIOS-->
+                <form action="" method="">
+                    <label for="nome">insira seu nome: </label>
+                    <input  type="text" name="nome" id="nome" class="estilo-campos"/>
+
+                    <label for="email">Insira seu e-mail: </label>
+                    <input type="email" name="email" id="email" class="estilo-campos"/>
+
+                    <label for="descricao">Fale sobre voçê:</label>
+                    <textarea name="descricao" id="descricao"></textarea>
+                    
+                    <label for="estado">Informe seu estado: </label>
+                    <select name="estado" id="estado">
+                        <option value="SP">São paulo</option>
+                        <option value="PR">Paraná</option>
+                    </select>
+                </form>
+
             </section>
+
         </main>
 
-        <footer>
-
-        </footer>
     </body>
 </html>
