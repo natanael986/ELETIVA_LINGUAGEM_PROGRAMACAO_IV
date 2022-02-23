@@ -11,7 +11,7 @@
  
  <body class="container">
 
-    <div class="row">
+    <div class="row containe-sm">
 
       <div class="col-4">
         <label for="Mark" class="label-control">First name</label>
@@ -62,11 +62,13 @@
 
     <h1>Cadastros</h1>
 
-    <div class="row">
+    <div class="row container-lg">
 
-      <div class="col-1 mt-3">
-        <label for="code" class="label-control">Código</label>
-        <div class="input-group-text">32</div>
+      <div class="col-1 mt-3" style="width: 4.4rem;">
+        <label for ="text" class="label-control">
+          <b>Código</b>
+        </label>
+        <input type="text" class="form-control mt2" id="codigo" value="32" disabled readonly>
       </div>
 
       <div class="col-5 mt-3">
@@ -104,7 +106,7 @@
         <input type="text" class="form-control" id="rua" name="rua" placeholder="ex:Rua 1400," />
       </div>
 
-      <div class="col-1 mt-3">
+      <div class="col-1 mt-3" style="width: 4.4rem;">
         <label for="numero" class="label-control">N°</label>
         <input type="text" class="form-control" id="numero" name="numero" placeholder="N°" />
       </div>
@@ -119,7 +121,7 @@
         <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" />
       </div>
 
-      <div class="col-1 mt-3">
+      <div class="col-1 mt-3" style="width: 4.4rem;">
         <label for="uf" class="label-control">UF</label>
         <input type="text" class="form-control" id="uf" name="uf" placeholder="UF" />
       </div>
@@ -135,7 +137,7 @@
       </div>
 
       <div class="row mt-3">
-        <div class="col-11 d-flex justify-content-end">
+        <div class="col d-flex justify-content-end">
           <button type="submit" class="btn btn-primary btn-danger" >Resetar</button>
         </div> 
         <div class="col-1 d-flex justify-content-end">
