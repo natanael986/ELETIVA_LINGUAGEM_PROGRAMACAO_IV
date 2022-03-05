@@ -22,15 +22,35 @@
     if ($valor1 % 2 == 0)
         echo "valor 1 é par! <br>";
 
-    echo "<br>";
-    echo "Multiplicação: ".($valor1 * $valor2);
-    echo "soma: ".($valor1 + $valor2);
-    echo "subtração: ".($valor1 - $valor2);
-    
-    if ($valor2 != 0)
-        echo "Divisão: ".($valor1 / $valor2);
     else
-        echo "Não é possivel dividir por 0";
+        echo "valor 1 é impar <br>";
+
+    $resultado = $valor1 % 2 == 0 ? "Valor 1 é par!" : "Valor 1 é impar!"; // outra possibilidade de "if e else"
+    echo $resultado;
+
+    echo "<br>";
+    echo "Multiplicação: " . ($valor1 * $valor2);
+    echo "<br>soma: " . ($valor1 + $valor2);
+    echo "<br>subtração: " . ($valor1 - $valor2);
+
+    if ($valor2 != 0)
+        echo "<br>Divisão: " . ($valor1 / $valor2);
+    else
+        echo "<br>Não é possivel dividir por 0";
+
+    $i = 10;
+    echo "Valor de i: ".(3 * $i++);
+
+    echo "<br>";
+
+    echo "Valor de i: " .(++$i);
+
+    for ($i=0; $i<10; $i++)
+        echo "Valor de i: $i";
+    
+    echo "-------------------<br>";
+
+
     ?>
 
 
