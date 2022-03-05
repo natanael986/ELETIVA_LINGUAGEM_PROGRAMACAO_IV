@@ -21,13 +21,13 @@
         <label for="valor1" class="label-control">
           Informe o valor 1:
         </label>
-        <input type="number" name="valor1" id="valo1" class="form-control" />
+        <input type="number" name="valor1" id="valor1" class="form-control" />
       </div>
       <div class="col">
         <label for="valor2" class="label-control">
           Informe o valor 2:
         </label>
-        <input type="number" name="valor2" id="valo2" class="form-control" />
+        <input type="number" name="valor2" id="valor2" class="form-control" />
       </div>
     </div>
     <div class="row mt-5">
