@@ -13,7 +13,7 @@
 </head>
 
 <body class="container">
-    <h1>Exercício 2</h1>
+    <h1>resultado ex 2</h1>
     <?php
     $valor = $_POST['valor'];
     $qtdeQ = $_POST['qtdeQ']; 
