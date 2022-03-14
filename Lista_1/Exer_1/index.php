@@ -32,7 +32,7 @@
 
             <div class="row mt-5">
                 <div class="col">
-                    <button type="submit" class="btn btn-secondary">Receber</button>
+                    <button type="submit" class="btn btn-success">Receber</button>
                 </div>
             </div>
         </div>
