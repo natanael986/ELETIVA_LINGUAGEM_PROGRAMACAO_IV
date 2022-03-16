@@ -23,8 +23,11 @@
 
   $mediaA = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
 
-  if ($mediaA >= 7)
+  if ($mediaA > 7)
     echo "<br> Parabéns!!! Você foi aprovado";
+
+  elseif ($mediaA == 7)
+    echo "Ufa, foi por pouco";
 
   else
     echo "<br> Desculpe, você foi reprovado";
