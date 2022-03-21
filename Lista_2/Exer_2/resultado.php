@@ -14,28 +14,32 @@
 
 <body class="container">
   <h1>Resultado ex 2</h1>
+  <div class="border-top border-start">
+    <div class="ms-3 mt-3" >
+      <?php
+      for ($i = 1; $i <= 10; $i++) {
+        $vetor[$i] = $_POST["valor$i"];
+      }
+      for ($i = 11; $i <= 20; $i++) {
+        $vetor[$i] = $_POST["valor$i"];
+      }
 
-  <?php
-  for ($i = 1; $i <= 10; $i++) {
-    $vetor[$i] = $_POST["valor$i"];
-  }
+      $valorProcurar = $_POST["valorProcurar"];
 
-  $valorProcurar = $_POST["valorProcurar"];
+      foreach ($vetor as $chave => $valor) {
+        if ($valor == $valorProcurar) {
+          echo "Valor : $valorProcurar está na posição : $chave ";
+          echo "<br>";
+        }
+      }
 
-  foreach ($vetor as $chave => $valor) {
-    if ($valor == $valorProcurar) {
-      echo "Valor : $valorProcurar está na posição : $chave ";
-      echo "<br>";
-    }
-    elseif ($valor != $valorProcurar){
-      echo "Valor: $valorProcurar não foi encontrado."; 
-    }
-  }
+      if ($valor != $valorProcurar) {
+        echo "Valor: $valorProcurar não foi encontrado.";
+      }
 
-
-  ?>
-
-
+      ?>
+    </div>
+  </div>
 
 
   <!-- Optional JavaScript; choose one of the two! -->
