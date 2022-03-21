@@ -28,11 +28,12 @@
             if ($vetor[$i] == $vetor[$i]) {
                 $auxiliar = $vetor[$i];
                 $vetor[$i] = "-";
+                $vetor[$i + 1] = $vetor[$i + 1];
                 $trocou = 1;
             }
         }
     }
-    foreach ($vetor as $chave => $valor){
+    foreach ($vetor as $chave => $valor) {
         echo "Posição: $chave Valor: $valor";
         echo "<br>";
     }
