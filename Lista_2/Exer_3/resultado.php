@@ -23,9 +23,8 @@
 
 
     for ($i = 1; $i < 10; $i++) {
-        if ($vetor[$i] == $vetor[$i]) {
-            $auxiliar = $vetor[$i];
-            $vetor[$i] = "=";
+        if ($vetor[$i] == $vetor[$i + 1]) {
+            $vetor[$i] = "-";
         }
     }
 
