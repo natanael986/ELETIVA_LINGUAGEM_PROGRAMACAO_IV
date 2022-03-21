@@ -16,23 +16,20 @@
     <h1>Resultado ex 3</h1>
     <?php
     $auxiliar = 0;
-    $trocou = 1;
 
     for ($i = 1; $i <= 10; $i++) {
         $vetor[$i] = $_POST["valor$i"];
     }
 
-    while ($trocou == 1) {
-        $trocou = 0;
-        for ($i = 1; $i <= 10; $i++) {
-            if ($vetor[$i] == $vetor[$i]) {
-                $auxiliar = $vetor[$i];
-                $vetor[$i] = "-";
-                $vetor[$i + 1] = $vetor[$i + 1];
-                $trocou = 1;
-            }
+
+    for ($i = 1; $i < 10; $i++) {
+        if ($vetor[$i] == $vetor[$i]) {
+            $auxiliar = $vetor[$i];
+            $vetor[$i] = "=";
         }
     }
+
+
     foreach ($vetor as $chave => $valor) {
         echo "Posição: $chave Valor: $valor";
         echo "<br>";
