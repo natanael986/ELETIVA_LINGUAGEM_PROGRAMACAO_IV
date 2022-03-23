@@ -19,13 +19,13 @@
 
     <div class="row">
       <?php
-      for ($i = 1; $i <= 10; $i++) {
+      for ($i = 1; $i <= 20; $i++) {
       ?>
-        <div class="col">
+        <div class="col-1">
           <label for="valor<?= $i ?>" class="label-control">
             Informe o valor <?= $i ?>:
           </label>
-          <input type="number" name="valor<?= $i ?>" id="valor<?= $i ?>" class="form-control" />
+          <input type="number" min="1" max="10" name="valor<?= $i ?>" id="valor<?= $i ?>" class="form-control" />
         </div>
       <?php
       }
@@ -33,18 +33,6 @@
     </div>
 
     <div class="row">
-      <?php
-      for ($i = 11; $i <= 20; $i++) {
-      ?>
-        <div class="col">
-          <label for="valor<?= $i ?>" class="label-control">
-            Informe o valor <?= $i ?>:
-          </label>
-          <input type="number" name="valor<?= $i ?>" id="valor<?= $i ?>" class="form-control" />
-        </div>
-      <?php
-      }
-      ?>
     </div>
     <div class="col-1 mt-3">
       <label for="valorProcurar" class="label-control">

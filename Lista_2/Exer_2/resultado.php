@@ -17,34 +17,23 @@
   <div class="border-top border-start">
     <div class="ms-3 mt-3">
       <?php
-      for ($i = 1; $i <= 10; $i++) {
-        $vetor[$i] = $_POST["valor$i"];
-      }
-      for ($i = 11; $i <= 20; $i++) {
+      for ($i = 1; $i <= 20; $i++) {
         $vetor[$i] = $_POST["valor$i"];
       }
 
       $valorProcurar = $_POST["valorProcurar"];
 
+      $naoEncontrado = true;
+
       foreach ($vetor as $chave => $valor) {
         if ($valor == $valorProcurar) {
           echo "Valor : $valorProcurar está na posição : $chave ";
           echo "<br>";
+          $naoEncontrado = false;
         }
       }
-      for($i = 1; $i < 2; $i++){
-        if ($valor <= 1 && $valor >= 10){
-          echo "Valor fora de intervalo";
-          echo "<br>";
-        }
-      }
-      if ($valor != $valorProcurar) {
-        for ($i = 1; $i < 2; $i++) {
-          if ($vetor[$i] <> $valorProcurar) {
-            echo "Valor: $valorProcurar não foi encontrado.";
-            echo "<br>";
-          }
-        }
+      if ($naoEncontrado){
+        echo "Valor não encontrado";
       }
       ?>
     </div>
