@@ -32,10 +32,17 @@
           echo "<br>";
         }
       }
+      for($i = 1; $i < 2; $i++){
+        if ($valor <= 1 && $valor >= 10){
+          echo "Valor fora de intervalo";
+          echo "<br>";
+        }
+      }
       if ($valor != $valorProcurar) {
         for ($i = 1; $i < 2; $i++) {
           if ($vetor[$i] <> $valorProcurar) {
             echo "Valor: $valorProcurar não foi encontrado.";
+            echo "<br>";
           }
         }
       }
