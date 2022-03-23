@@ -15,7 +15,7 @@
 <body class="container">
   <h1>Resultado ex 2</h1>
   <div class="border-top border-start">
-    <div class="ms-3 mt-3" >
+    <div class="ms-3 mt-3">
       <?php
       for ($i = 1; $i <= 10; $i++) {
         $vetor[$i] = $_POST["valor$i"];
@@ -32,11 +32,13 @@
           echo "<br>";
         }
       }
-
       if ($valor != $valorProcurar) {
-        echo "Valor: $valorProcurar não foi encontrado.";
+        for ($i = 1; $i < 2; $i++) {
+          if ($vetor[$i] <> $valorProcurar) {
+            echo "Valor: $valorProcurar não foi encontrado.";
+          }
+        }
       }
-
       ?>
     </div>
   </div>
