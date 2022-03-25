@@ -15,23 +15,22 @@
 <body class="container">
     <h1>Resultado ex 3</h1>
     <?php
-    $auxiliar = 0;
+    $existe = 0;
 
     for ($i = 1; $i <= 10; $i++) {
         $vetor[$i] = $_POST["valor$i"];
     }
 
-
-    for ($i = 1; $i < 10; $i++) {
-        if ($vetor[$i] == $vetor[$i + 1]) {
-            $vetor[$i] = "-";
-        }
-    }
-
-
     foreach ($vetor as $chave => $valor) {
-        echo "Posição: $chave Valor: $valor";
-        echo "<br>";
+        $existe = 0;
+        for ($i = 1; $i <= 10; $i++){
+            if ($vetor[$i] == $valor){
+                $existe++;
+            }
+        }
+        if ($existe >= 2)
+            $vetor[$chave] = "-";
+        echo "Valor: ".$vetor[$chave]."<br>";
     }
     ?>
 
