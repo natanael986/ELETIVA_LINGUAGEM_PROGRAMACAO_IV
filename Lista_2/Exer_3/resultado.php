@@ -15,34 +15,14 @@
 <body class="container">
     <h1>Resultado ex 3</h1>
     <?php
-<<<<<<< HEAD
     $auxiliar = 0;
     $trocou = 0;
     $hifen = "-";
-=======
 
->>>>>>> 985977fb4ffc6af8ee8981a95f46a18f9b154906
     for ($i = 1; $i <= 10; $i++) {
         $vetor[$i] = $_POST["valor$i"];
     }
 
-<<<<<<< HEAD
-
-    while ($trocou == 1) {
-        $trocou = 0;
-        for ($i = 1; $i < 10; $i++) {
-            if ($vetor[$i] == $vetor[$i]) {
-                $auxiliar = $vetor[$i];
-                $vetor[$i] = $vetor[$i + 1];
-                $vetor[$i + 1] = $hifen;
-                $trocou = 1;
-            }
-        }
-    }
-
-
-=======
->>>>>>> 985977fb4ffc6af8ee8981a95f46a18f9b154906
     foreach ($vetor as $chave => $valor) {
         $existe = 0;
         for ($i = 1; $i <= 10; $i++){
