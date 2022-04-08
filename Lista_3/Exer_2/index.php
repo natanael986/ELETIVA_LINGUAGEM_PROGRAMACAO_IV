@@ -15,26 +15,24 @@
 <body class="container">
     <h1>Exercício 2</h1>
 
-    <form action="resultados.php" method="POST">
+    <form method="post" action="resultados.php">
+        <div class="row">
             <?php
-                for ($i = 1; $i <= 10; $i++) {
+            for ($i = 1; $i <= 10; $i++) {
             ?>
-                <div class="row">
-                    <div class="col">
-                        <label for="nome" class="label-control">Informe o nome do aluno: </label>
-                        <input type="text" class="form-control" id="nome" name="nome" />
-                    </div>
-                <?php
+                <div class="col-5">
+                    <label for="alu<?= $i ?>" class="label-control">Informe o nome do aluno: </label>
+                    <input type="text" name="alu<?= $i?>" id="alu<?= $i ?>" class="form-control" />
+                </div>
+            <?php
             }
-                ?>
-                </div>
-                <div class="row mt-3">
-                    <div class="col">
-                        <button type="submit" class="btn btn-warning">
-                            Enviar
-                        </button>
-                    </div>
-                </div>
+            ?>
+        </div>
+        <div class="row mt-3">
+            <div class="col-3">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
     </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
