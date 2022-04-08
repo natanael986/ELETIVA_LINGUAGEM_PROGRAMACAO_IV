@@ -16,15 +16,22 @@
     <h1>Resultado ex 3</h1>
     <?php
     $auxiliar = 0;
-
+    $trocou = 0;
+    $hifen = "-";
     for ($i = 1; $i <= 10; $i++) {
         $vetor[$i] = $_POST["valor$i"];
     }
 
 
-    for ($i = 1; $i < 10; $i++) {
-        if ($vetor[$i] == $vetor[$i + 1]) {
-            $vetor[$i] = "-";
+    while ($trocou == 1) {
+        $trocou = 0;
+        for ($i = 1; $i < 10; $i++) {
+            if ($vetor[$i] == $vetor[$i]) {
+                $auxiliar = $vetor[$i];
+                $vetor[$i] = $vetor[$i + 1];
+                $vetor[$i + 1] = $hifen;
+                $trocou = 1;
+            }
         }
     }
 
