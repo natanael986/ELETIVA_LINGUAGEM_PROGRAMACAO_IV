@@ -1,0 +1,15 @@
+{
+    "name": "aluno/natanael",
+    "autoload": {
+        "psr-4": {
+            "Aluno\\Natanael\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "natan986",
+            "email": "juniornatan986@gmail.com"
+        }
+    ],
+    "require": {}
+}
