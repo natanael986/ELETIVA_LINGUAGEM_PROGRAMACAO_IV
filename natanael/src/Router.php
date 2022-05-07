@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Aluno\NatanaelPHp;
+namespace Aluno\Natanael;
 
 
 class Router
