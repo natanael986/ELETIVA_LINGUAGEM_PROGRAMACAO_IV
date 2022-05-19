@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Aluno\Lista_1\Lista_1_0\Exer_1_0\Controller;
+namespace Aluno\Natanael\Controller;
 
 
 class ExercicioController
@@ -12,7 +12,7 @@ class ExercicioController
         require_once("../src/View/exer1.php");
     }
 
-    public static function Resultado()
+    public static function exibirResultado()
     {
         $valor1 = $_POST["valor1"];
         $valor2 = $_POST["valor2"];

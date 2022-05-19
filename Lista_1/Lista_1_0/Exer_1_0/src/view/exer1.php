@@ -13,7 +13,7 @@
 
 <body class="container">
     <h1>Exercício 1</h1>
-    <form method="post" action="resultado.php">
+    <form method="POST" action="/resultado">
         <div class="row">
             <div class="col">
                 <label for="valor" class="label-control">
