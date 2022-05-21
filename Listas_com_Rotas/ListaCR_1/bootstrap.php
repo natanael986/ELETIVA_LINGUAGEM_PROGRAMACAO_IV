@@ -34,6 +34,17 @@ $router->post(
         'Aluno\Natanael\Controller\ExerCR_2::exibirResultado2'
 );
 
+//exercicio 3
+$router->get(
+        '/exercicio3',
+        'Aluno\Natanael\Controller\ExerCR_3::exibir3'
+);
+
+$router->post(
+        '/exercicio3-resultado',
+        'Aluno\Natanael\Controller\ExerCR_3::exibirResultado3'
+);
+
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
 $result = $router->handler();
