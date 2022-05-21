@@ -4,7 +4,7 @@
 namespace Aluno\Natanael\Controller;
 
 
-class ExerCR_1
+class ExerCR_2
 {
 
     public static function exibir2()

@@ -14,7 +14,7 @@
 
 <body class="container">
     <h1>Exercício 2</h1>
-    <form method="post" action="/exercicio2-resultado.php">
+    <form method="post" action="/exercicio2-resultado">
         <div class="row">
             <div class="col">
                 <label for="valor" class="label-control">
@@ -32,11 +32,18 @@
 
             <div class="row mt-5">
                 <div class="col">
-                    <button type="submit" class="btn btn-success">calcular</button>
+                    <button type="submit" class="btn btn-success">Calcular</button>
                 </div>
             </div>
         </div>
     </form>
+
+    <div class="col-2 mt-3">
+        <?php
+        if (isset($valor))
+            echo "O valor do troco é $valor";
+        ?>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
