@@ -7,10 +7,11 @@ use Aluno\Natanael\Model\DAO\Conexao;
 
 class ClientesDAO
 {
+
     public function inserir(Clientes $c)
     {
         try {
-            $sql = "INSERT INTO `clientes`(`nome`, `email`, `idade`) VALUES (:nome,:email,:idade)";
+            $sql = "INSERT INTO `clientes`(`nome`, `email`, `idade`) VALUES (:nome, :email, :idade)";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":nome", $c->getNome());
             $p->bindValue(":email", $c->getEmail());
@@ -41,7 +42,8 @@ class ClientesDAO
         try {
             $sql = "DELETE FROM `clientes` WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
-            $p->bindValue(":id", $id->getId());
+            $p->bindValue(":id", $id);
+            return $p->execute();
         } catch (\Exception $e) {
             return false;
         }
@@ -60,7 +62,7 @@ class ClientesDAO
     public function consultarPorId($id)
     {
         try {
-            $sql = "SELECT * FROM clientes Where id = :id";
+            $sql = "SELECT * FROM clientes WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":id", $id);
             return $p->execute();

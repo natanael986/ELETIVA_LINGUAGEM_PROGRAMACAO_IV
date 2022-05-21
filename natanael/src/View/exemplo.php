@@ -15,7 +15,7 @@
 <body class="container">
     <h1>Exemplo</h1>
 
-    <form method="post" action="/exemplo-resultado">
+    <form method="POST" action="/exemplo-resultado">
         <div class="row">
             <div class="col">
                 <label class="label-control">Valor 1</label>
@@ -26,16 +26,16 @@
                 <input class="form-control" name="valor2" type="text" />
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="row">
             <div class="col">
-                <button type="submit" class="btn btn-primary">OK</button>
+                <button type="submit" class="btn btn-primary">Ok</button>
             </div>
         </div>
     </form>
 
     <?php
     if (isset($soma))
-        echo "O valor da soma é: $soma"
+        echo "O valor da soma é $soma";
     ?>
 
     <!-- Optional JavaScript; choose one of the two! -->

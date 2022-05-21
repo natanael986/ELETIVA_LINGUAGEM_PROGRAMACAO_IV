@@ -28,7 +28,8 @@ class Router
         $this->add('POST', $route, $action);
     }
 
-    private function add(string $method, string $route, $action){
+    private function add(string $method, string $route, $action)
+    {
         $this->routes[$method][$route] = $action;
     }
 
@@ -39,17 +40,17 @@ class Router
 
     public function handler()
     {
-        if (empty($this->routes[$this->method])){
+        if (empty($this->routes[$this->method])) {
             return false;
         }
 
-        if (isset($this->routes[$this->method][$this->path])){
+        if (isset($this->routes[$this->method][$this->path])) {
             return $this->routes[$this->method][$this->path];
         }
 
-        foreach($this->routes[$this->method] as $route => $action){
+        foreach ($this->routes[$this->method] as $route => $action) {
             $result = $this->checkUrl($route, $this->path);
-            if ($result >= 1){
+            if ($result >= 1) {
                 return $action;
             }
         }
@@ -73,5 +74,4 @@ class Router
 
         return $result;
     }
-
 }
