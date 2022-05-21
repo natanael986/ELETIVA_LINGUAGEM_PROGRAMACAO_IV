@@ -26,23 +26,45 @@ $router->post(
 //exercicio 2
 $router->get(
         '/exercicio2',
-        'Aluno\Natanael\Controller\ExerCR_2::exibir2'
+        'Aluno\Natanael\Controller\ExerCR_2::exibir'
 );
 
 $router->post(
         '/exercicio2-resultado',
-        'Aluno\Natanael\Controller\ExerCR_2::exibirResultado2'
+        'Aluno\Natanael\Controller\ExerCR_2::exibirResultado'
 );
 
 //exercicio 3
 $router->get(
         '/exercicio3',
-        'Aluno\Natanael\Controller\ExerCR_3::exibir3'
+        'Aluno\Natanael\Controller\ExerCR_3::exibir'
 );
 
 $router->post(
         '/exercicio3-resultado',
-        'Aluno\Natanael\Controller\ExerCR_3::exibirResultado3'
+        'Aluno\Natanael\Controller\ExerCR_3::exibirResultado'
+);
+
+//exercicio 4
+$router->get(
+        '/exercicio4',
+        'Aluno\Natanael\Controller\ExerCR_4::exibir'
+);
+
+$router->post(
+        '/exercicio4-resultado',
+        'Aluno\Natanael\Controller\ExerCR_4::exibirResultado'
+);
+
+//exercicio 5
+$router->get(
+        '/exercicio5',
+        'Aluno\Natanael\Controller\ExerCR_5::exibir'
+);
+
+$router->post(
+        '/exercicio5-resultado',
+        'Aluno\Natanael\Controller\ExerCR_5::exibirResultado'
 );
 
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
