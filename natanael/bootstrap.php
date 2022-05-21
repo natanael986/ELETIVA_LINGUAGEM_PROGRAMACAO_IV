@@ -26,7 +26,7 @@ $router->post("/exemplo-resultado", "Aluno\Natanael\Controller\ExercicioControll
 
 $router->get('/cliente/novo', 'Aluno\Natanael\Controller\ClientesController::abrirFormulario');
 
-$router->post('cliente/inserir', 'Aluno\Natanael\Controller\ClientesController::inserir');
+$router->post('/cliente/inserir', 'Aluno\Natanael\Controller\ClientesController::inserir');
 
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 

@@ -15,7 +15,7 @@
 <body class="container">
     <h1>Inserir Cliente</h1>
 
-    <form action="" method="post">
+    <form action="/cliente/inserir" method="post">
         <div class="row">
             <div class="col-5">
                 <label for="nome" class="label-control">
