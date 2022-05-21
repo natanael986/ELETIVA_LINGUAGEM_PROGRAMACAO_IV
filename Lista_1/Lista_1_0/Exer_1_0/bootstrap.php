@@ -16,9 +16,9 @@ $router = new \Aluno\Natanael\Router($method, $path);
 
 //ADCIONAR AS ROTAS VÁLIDAS ABAIXO
 
-$router->get('/exer1', "Aluno\Natanael\Controller\ExercicioController::exibir");
+$router->get('/exercicio', 'Aluno\Natanael\Controller\ExercicioController::exibir');
 
-$router->post("/resultado", "Aluno\Natanael\Controller\ExercicioController::exibirResultado");
+$router->post('/resultado', 'Aluno\Natanael\Controller\ExercicioController::exibirResultado');
 
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
