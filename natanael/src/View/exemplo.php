@@ -15,7 +15,7 @@
 <body class="container">
     <h1>Exemplo</h1>
 
-    <form method="POST" action="/resultado">
+    <form method="post" action="/exemplo-resultado">
         <div class="row">
             <div class="col">
                 <label class="label-control">Valor 1</label>

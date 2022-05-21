@@ -22,7 +22,7 @@ $router->get("/ola-mundo", function () {
 
 $router->get('/exemplo', "Aluno\Natanael\Controller\ExercicioController::exibir");
 
-$router->post("/exemplo-resultado", "Aluno\Natanael\Controller\ExercicioController::exibirResultado");
+$router->post('/exemplo-resultado', "Aluno\Natanael\Controller\ExercicioController::exibirResultado");
 
 $router->get('/cliente/novo', 'Aluno\Natanael\Controller\ClientesController::abrirFormulario');
 
