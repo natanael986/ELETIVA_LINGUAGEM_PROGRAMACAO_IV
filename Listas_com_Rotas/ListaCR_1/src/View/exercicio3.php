@@ -30,6 +30,13 @@
         </div>
     </form>
 
+    <div class="col-2 mt-3">
+        <?php
+        if (isset($result))
+            echo $result;
+        ?>
+    </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
