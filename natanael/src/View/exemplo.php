@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col mt-3">
                 <button type="submit" class="btn btn-primary">Ok</button>
             </div>
         </div>

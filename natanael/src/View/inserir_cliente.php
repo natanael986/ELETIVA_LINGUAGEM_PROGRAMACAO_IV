@@ -10,7 +10,7 @@
     <title>Inserir Cliente</title>
 </head>
 
-<body>
+<body class="container">
     <h1>Inserir Cliente</h1>
     <form action="/cliente/inserir" method="post">
         <div class="row">
