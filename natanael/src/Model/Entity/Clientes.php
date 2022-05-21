@@ -1,6 +1,6 @@
 <?php 
 
-    namespace Aluno\Eletiva\Model\Entity;
+    namespace Aluno\Natanael\Model\Entity;
     
     class Clientes
     {

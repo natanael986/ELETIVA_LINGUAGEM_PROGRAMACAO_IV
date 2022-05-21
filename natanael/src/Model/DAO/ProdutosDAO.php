@@ -1,8 +1,8 @@
 <?php
 
-    namespace Aluno\Eletiva\Model\DAO;
+    namespace Aluno\Natanael\Model\DAO;
 
-use Aluno\Eletiva\Model\Entity\Produtos;
+use Aluno\Natanael\Model\Entity\Produtos;
 
 class ProdutosDAO
     {

@@ -24,6 +24,10 @@ $router->get('/exemplo', "Aluno\Natanael\Controller\ExercicioController::exibir"
 
 $router->post("/exemplo-resultado", "Aluno\Natanael\Controller\ExercicioController::exibirResultado");
 
+$router->get('/cliente/novo', 'Aluno\Natanael\Controller\ClientesController::abrirFormulario');
+
+$router->post('cliente/inserir', 'Aluno\Natanael\Controller\ClientesController::inserir');
+
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
 $result = $router->handler();
