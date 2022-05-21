@@ -15,7 +15,7 @@
 <body class="container">
     <h1>Exercicio 1</h1>
 
-    <form method="POST" action="/exemplo-resultado">
+    <form method="POST" action="/exercicio1-resultado">
         <div class="row">
             <div class="col">
                 <label class="label-control">Valor do pagamento: </label>
@@ -27,17 +27,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col mt-3">
                 <button type="submit" class="btn btn-primary">Receber</button>
             </div>
         </div>
     </form>
-
-    <?php
-    if (isset($troco))
-        echo "O valor do troco é $troco";
-    ?>
-
+    <div class="col-2 mt-3">
+        <?php
+        if (isset($troco))
+            echo "O valor do troco é $troco";
+        ?>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

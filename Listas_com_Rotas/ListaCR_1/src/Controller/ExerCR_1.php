@@ -4,7 +4,7 @@
 namespace Aluno\Natanael\Controller;
 
 
-class ExercicioController
+class ExerCR_1
 {
 
     public static function exibir(){
