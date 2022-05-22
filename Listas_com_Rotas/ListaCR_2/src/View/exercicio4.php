@@ -13,23 +13,38 @@
 </head>
 
 <body class="container">
-    <h1>Resultado ex 4</h1>
-    <div class="border-top border-start">
-        <div class="mt-2 ms-2">
+    <h1>Exercicio 4</h1>
+    <form action="/exercicio4-resultado" method="POST">
+
+        <div class="row">
             <?php
             for ($i = 1; $i <= 10; $i++) {
-                $vetor[$i] = $_POST["valor$i"];
+            ?>
+                <div class="col">
+                    <label for="valor<?= $i ?>" class="label-control">
+                        Informe o valor <?= $i ?>:
+                    </label>
+                    <input type="number" name="valor<?= $i ?>" id="valor<?= $i ?>" class="form-control" />
+                </div>
+            <?php
             }
-
-            $valores = 0;
-            foreach ($vetor as $chave => $valor) {
-                $valores = $valores + $valor;
-            }
-
-            echo "A média dos valores digitados é: " . ($valores / 10);
             ?>
         </div>
+        <div class="row mt-4">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+        </div>
+    </form>
+
+    <div class="col-3 mt-3">
+        <?php
+        if (isset($result))
+            echo $result;
+        ?>
     </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

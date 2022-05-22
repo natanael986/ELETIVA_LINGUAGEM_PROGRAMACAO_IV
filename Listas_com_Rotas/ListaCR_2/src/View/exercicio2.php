@@ -13,23 +13,42 @@
 </head>
 
 <body class="container">
-    <h1>Resultado ex 4</h1>
-    <div class="border-top border-start">
-        <div class="mt-2 ms-2">
+    <h1>Exercicio 2</h1>
+
+    <form action="/exercicio2-resultado" method="POST">
+
+        <div class="row">
             <?php
-            for ($i = 1; $i <= 10; $i++) {
-                $vetor[$i] = $_POST["valor$i"];
+            for ($i = 1; $i <= 20; $i++) {
+            ?>
+                <div class="col-1">
+                    <label for="valor<?= $i ?>" class="label-control">
+                        Informe o valor <?= $i ?>:
+                    </label>
+                    <input type="number" min="1" max="10" name="valor<?= $i ?>" id="valor<?= $i ?>" class="form-control" />
+                </div>
+            <?php
             }
-
-            $valores = 0;
-            foreach ($vetor as $chave => $valor) {
-                $valores = $valores + $valor;
-            }
-
-            echo "A média dos valores digitados é: " . ($valores / 10);
             ?>
         </div>
-    </div>
+
+        <div class="row">
+        </div>
+        <div class="col-1 mt-3">
+            <label for="valorProcurar" class="label-control">
+                Procurar valor :
+            </label>
+            <input type="number" name="valorProcurar" id="valorProcurar" class="form-control" />
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+        </div>
+    </form>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
