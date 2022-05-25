@@ -37,6 +37,11 @@ $router->post(
     'Aluno\Natanael\Controller\ClientesController::inserirCliente'
 );
 
+$router->get(
+    '/clientes',
+    'Aluno\Natanael\Controller\ClientesController::abrirListaClientes'
+);
+
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
 $result = $router->handler();
