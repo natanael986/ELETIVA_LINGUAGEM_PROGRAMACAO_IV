@@ -31,6 +31,6 @@ class ClientesController
         } else {
             $resposta = false;
         }
-        require_once "../src/View/Listar_clientes";
+        require_once "../src/View/Listar_clientes.php";
     }
 }
