@@ -42,6 +42,11 @@ $router->get(
     'Aluno\Natanael\Controller\ClientesController::abrirListaClientes'
 );
 
+$router->get(
+    '/cliente/alterar/{id}',
+    'Aluno\Natanael\Controller\ClientesController::abrirFormularioAlterar'
+);
+
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 
 $result = $router->handler();

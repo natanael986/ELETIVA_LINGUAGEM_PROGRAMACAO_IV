@@ -18,7 +18,7 @@
         <h1>Clientes</h1>
 
         <?php
-            if(isset($resposta)){
+        if (isset($resposta)) {
             if ($resposta) {
                 echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
                 Registro inserido com sucesso!
@@ -37,18 +37,23 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Ações</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
+                <?php while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) { ?>
+                    <tr>
+                        <th scope="row"><?= $linha['id'] ?></th>
+                        <td><?= $linha['nome'] ?></td>
+                        <td><?= $linha['email'] ?></td>
+                        <td> <a href="/cliente/alterar/<?= $linha['id'] ?>"
+                             <a class="btn btn-warning">Alterar</a>
+                             <a class="btn btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                <?php } ?>
                 <tr>
                     <th scope="row">2</th>
                     <td>Jacob</td>
