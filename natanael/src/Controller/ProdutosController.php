@@ -38,4 +38,29 @@ class ProdutosController{
         ProdutosController::abrirListarProdutos();
     }
 
+    public static function editarProduto($params){
+        $produto = new Produtos();
+        $produto->setNome($_POST['nome']);
+        $produto->setDescricao($_POST['descricao']);
+        $produto->setValor($_POST['valor']);
+        $produto->setId($params[1]);
+        $dao = new ProdutosDAO();
+        if ($dao->alterar($produto)){
+            $resposta = true;
+        } else {
+            $resposta = false;
+        }
+        ProdutosController::abrirListarProdutos();
+    }
+
+    public static function excluirProduto($params){
+        $dao = new ProdutosDAO();
+        if ($dao->excluir($params[1])){
+            $resposta = true;
+        } else {
+            $resposta = false;
+        }
+        ProdutosController::abrirListarProdutos();
+    }
+
 }

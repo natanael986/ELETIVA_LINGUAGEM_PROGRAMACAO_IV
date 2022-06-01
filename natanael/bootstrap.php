@@ -47,6 +47,12 @@ $router->get(
     'Aluno\Natanael\Controller\ClientesController::abrirFormularioAlterar'
 );
 
+$router->post('/cliente/editar/{id}',
+'Aluno\Natanael\Controller\ClientesController::editarCliente');
+
+$router->get('/cliente/excluir/{id}',
+'Aluno\Natanael\Controller\ClientesController::excluirCliente');
+
 // Produtos
 $router->get(
     '/produto/novo',
@@ -67,6 +73,12 @@ $router->get(
     '/produto/alterar/{id}',
     'Aluno\Natanael\Controller\ProdutosController::abrirFormularioAlterar'
 );
+
+$router->post('/produto/editar/{id}',
+'Aluno\Natanael\Controller\ProdutosController::editarProduto');
+
+$router->get('/produto/excluir/{id}',
+'Aluno\Natanael\Controller\ProdutosController::excluirProduto');
 
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA
 

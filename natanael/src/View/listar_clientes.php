@@ -37,9 +37,9 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nome</th>
+                    <th scope="col">Nome</t h>
                     <th scope="col">Email</th>
-                    <th scope="col">Ações</th>
+                    <th scope="col">Idade</th>
                 </tr>
             </thead>
             <tbody>
@@ -48,9 +48,10 @@
                         <th scope="row"><?= $linha['id'] ?></th>
                         <td><?= $linha['nome'] ?></td>
                         <td><?= $linha['email'] ?></td>
-                        <td> <a href="/cliente/alterar/<?= $linha['id'] ?>"
-                             <a class="btn btn-warning">Alterar</a>
-                             <a class="btn btn-danger">Excluir</a>
+                        <td><?= $linha['idade'] ?></td>
+                        <td> <a href="/cliente/alterar/<?= $linha['id'] ?>" class="btn btn-warning">Alterar </a>
+                             
+                             <a href="/cliente/excluir/<?= $linha['id'] ?>" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
                 <?php } ?>

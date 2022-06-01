@@ -42,4 +42,29 @@ class ClientesController
         }
         ClientesController::abrirListarClientes();
     }
+
+    public static function editarCliente($params){
+        $cliente = new Clientes();
+        $cliente->setEmail($_POST['email']);
+        $cliente->setIdade($_POST['idade']);
+        $cliente->setNome($_POST['nome']);
+        $cliente->setId($params[1]);
+        $dao = new ClientesDAO();
+        if ($dao->alterar($cliente)){
+            $resposta = true;
+        } else {
+            $resposta = false;
+        }
+        ClientesController::abrirListarClientes();
+    }
+
+    public static function excluirCliente($params){
+        $dao = new ClientesDAO();
+        if ($dao->excluir($params[1])){
+            $resposta = true;
+        } else {
+            $resposta = false;
+        }
+        ClientesController::abrirListarClientes();
+    }
 }
