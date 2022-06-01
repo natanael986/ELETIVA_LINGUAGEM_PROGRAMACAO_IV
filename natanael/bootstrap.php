@@ -39,11 +39,32 @@ $router->post(
 
 $router->get(
     '/clientes',
-    'Aluno\Natanael\Controller\ClientesController::abrirListaClientes'
+    'Aluno\Natanael\Controller\ClientesController::abrirListarClientes'
 );
 
 $router->get(
     '/cliente/alterar/{id}',
+    'Aluno\Natanael\Controller\ClientesController::abrirFormularioAlterar'
+);
+
+// Produtos
+$router->get(
+    '/produto/novo',
+    'Aluno\Natanael\Controller\ClientesController::abrirFormularioInserir'
+);
+
+$router->post(
+    '/produto/inserir',
+    'Aluno\Natanael\Controller\ClientesController::inserirProduto'
+);
+
+$router->get(
+    '/produtos',
+    'Aluno\Natanael\Controller\ClientesController::abrirListarProdutos'
+);
+
+$router->get(
+    '/produto/alterar/{id}',
     'Aluno\Natanael\Controller\ClientesController::abrirFormularioAlterar'
 );
 
