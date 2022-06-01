@@ -9,13 +9,13 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Listar Clientes</title>
+    <title>Listar Produtos</title>
 </head>
 
 <body class="container">
     <?php require_once "barra_navegacao.php"; ?>
     <div class="container">
-        <h1>Clientes</h1>
+        <h1>Produtos</h1>
 
         <?php
         if (isset($resposta)) {
@@ -38,8 +38,8 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Ações</th>
+                    <th scope="col">Descricao</th>
+                    <th scope="col">Valor</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,8 +47,9 @@
                     <tr>
                         <th scope="row"><?= $linha['id'] ?></th>
                         <td><?= $linha['nome'] ?></td>
-                        <td><?= $linha['email'] ?></td>
-                        <td> <a href="/cliente/alterar/<?= $linha['id'] ?>"
+                        <td><?= $linha['descricao'] ?></td>
+                        <td><?= $linha['valor'] ?></td>
+                        <td> <a href="/produto/alterar/<?= $linha['id'] ?>"
                              <a class="btn btn-warning">Alterar</a>
                              <a class="btn btn-danger">Excluir</a>
                         </td>

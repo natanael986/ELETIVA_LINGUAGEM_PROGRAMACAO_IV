@@ -50,22 +50,22 @@ $router->get(
 // Produtos
 $router->get(
     '/produto/novo',
-    'Aluno\Natanael\Controller\ClientesController::abrirFormularioInserir'
+    'Aluno\Natanael\Controller\ProdutosController::abrirFormularioInserir'
 );
 
 $router->post(
     '/produto/inserir',
-    'Aluno\Natanael\Controller\ClientesController::inserirProduto'
+    'Aluno\Natanael\Controller\ProdutosController::inserirProduto'
 );
 
 $router->get(
     '/produtos',
-    'Aluno\Natanael\Controller\ClientesController::abrirListarProdutos'
+    'Aluno\Natanael\Controller\ProdutossController::abrirListarProdutos'
 );
 
 $router->get(
     '/produto/alterar/{id}',
-    'Aluno\Natanael\Controller\ClientesController::abrirFormularioAlterar'
+    'Aluno\Natanael\Controller\ProdutosController::abrirFormularioAlterar'
 );
 
 //ADICIONAR AS ROTAS VÁLIDAS ACIMA

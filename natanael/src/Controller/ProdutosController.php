@@ -5,7 +5,7 @@ namespace Aluno\Natanael\Controller;
 use Aluno\Natanael\Model\DAO\ProdutosDAO;
 use Aluno\Natanael\Model\Entity\Produtos;
 
-class ClientesController{
+class ProdutosController{
     public static function abrirFormularioInserir(){
         require_once "../src/View/inserir_produto.php";
     }
@@ -30,11 +30,12 @@ class ClientesController{
         $produto -> setValor($_POST['valor']);
         $produto -> setNome($_POST['nome']);
         $dao = new ProdutosDAO();
-        if($dao -> inserir($produto)){
-            return "Inserido com sucesso!";
-        }else{
-            return "Erro ao inserir";
+        if ($dao->inserir($produto)) {
+            $resposta = true;
+        } else {
+            $resposta = false;
         }
+        ProdutosController::abrirListarProdutos();
     }
 
 }
