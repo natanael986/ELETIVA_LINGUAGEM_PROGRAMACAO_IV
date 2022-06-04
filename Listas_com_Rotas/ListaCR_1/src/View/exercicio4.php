@@ -12,31 +12,33 @@
     <title>LISTA 1</title>
 </head>
 
-<body class="container">
-    <h1>Exercício 4</h1>
-    <form method="post" action="/exercicio4-resultado">
-        <div class="row">
-            <div class="col">
-                <label for="valor" class="label-control">
-                    Informe um valor:
-                </label>
-                <input type="float" name="valor" id="valor" class="form-control" />
-            </div>
-            <div class="row mt-5">
+<body>
+    <?php require_once "barra_navegacao.php"; ?>
+    <div class="container">
+        <h1>Exercício 4</h1>
+        <form method="post" action="/exercicio4-resultado">
+            <div class="row">
                 <div class="col">
-                    <button type="submit" class="btn btn-success">Enviar</button>
+                    <label for="valor" class="label-control">
+                        Informe um valor:
+                    </label>
+                    <input type="float" name="valor" id="valor" class="form-control" />
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
                 </div>
             </div>
+        </form>
+
+        <div class="col-3 mt-3">
+            <?php
+            if (isset($result))
+                echo $result;
+            ?>
         </div>
-    </form>
-
-    <div class="col-3 mt-3">
-        <?php
-        if (isset($result))
-            echo $result;
-        ?>
     </div>
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

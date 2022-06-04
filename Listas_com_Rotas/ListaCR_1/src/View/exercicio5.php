@@ -12,51 +12,54 @@
     <title>LISTA 1</title>
 </head>
 
-<body class="container">
-    <h1>Exercício 5</h1>
-    <form method="post" action="/exercicio5-resultado">
-        <div class="row">
-            <div class="col">
-                <label for="valor" class="label-control">
-                    Informe a primeira nota:
-                </label>
-                <input type="float" name="nota1" id="nota1" class="form-control" />
-            </div>
-
-            <div class="col">
-                <label for="nota2" class="label-control">
-                    Informe a segunda nota:
-                </label>
-                <input type="float" name="nota2" id="nota2" class="form-control" />
-            </div>
-
-            <div class="col">
-                <label for="nota3" class="label-control">
-                    Informe a terceira nota:
-                </label>
-                <input type="float" name="nota3" id="nota3" class="form-control" />
-            </div>
-
-            <div class="col">
-                <label for="nota4" class="label-control">
-                    Informe a quarta nota:
-                </label>
-                <input type="float" name="nota4" id="nota4" class="form-control" />
-            </div>
-
-            <div class="row mt-5">
+<body>
+    <?php require_once "barra_navegacao.php"; ?>
+    <div class="container">
+        <h1>Exercício 5</h1>
+        <form method="post" action="/exercicio5-resultado">
+            <div class="row">
                 <div class="col">
-                    <button type="submit" class="btn btn-success">Calcular</button>
+                    <label for="valor" class="label-control">
+                        Informe a primeira nota:
+                    </label>
+                    <input type="float" name="nota1" id="nota1" class="form-control" />
+                </div>
+
+                <div class="col">
+                    <label for="nota2" class="label-control">
+                        Informe a segunda nota:
+                    </label>
+                    <input type="float" name="nota2" id="nota2" class="form-control" />
+                </div>
+
+                <div class="col">
+                    <label for="nota3" class="label-control">
+                        Informe a terceira nota:
+                    </label>
+                    <input type="float" name="nota3" id="nota3" class="form-control" />
+                </div>
+
+                <div class="col">
+                    <label for="nota4" class="label-control">
+                        Informe a quarta nota:
+                    </label>
+                    <input type="float" name="nota4" id="nota4" class="form-control" />
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col">
+                        <button type="submit" class="btn btn-success">Calcular</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
 
-    <div class="col-3 mt-3">
-        <?php
-        if (isset($result))
-            echo $result;
-        ?>
+        <div class="col-3 mt-3">
+            <?php
+            if (isset($result))
+                echo $result;
+            ?>
+        </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
